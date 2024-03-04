@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+<head>
+        NMCP
+</head>
+<body>
+    NMCP PRACTICALS:-
+    Practical 1] Birge VETA Method: -
+    #include <Stdio.h>
+    #include<conio.h>
+    #include<math.h>
+    Void main() {
+    Int I, j, n, MAX1c=5;
+    double a[10], b[10], c[10], p[10];
+    printf(“\n enter the order of polynomial equation n=*);
+    scanf(“%d”, an);
+    for(i=0;i<=;i++)
+    {
+     printf(“in enter coefficients a[%d] =”, 1);
+     Scanf(“%if”, &a[1]);
+    }
+     Printf(“\n enter the initial guess p[0]=”);
+     Scanf(“%if”, &p[0]);
+     b[0]=a[0];
+     c[0]=b[0];
+     j=0;
+     do
+     {
+     for(1=I; i<=n; i++)
+     { 
+     b[1]=a[1]-p[J]*b[1-i];
+     c[1]=b[1]-p[J]*c[1-i];
+     }
+     J++;
+     p[J]*p[j-1]-(b[n]/c[n-1]);
+     printf(“\n at iteration %d p is %if”,),p[j]);
+     
+     }
+     While(j*maxit);
+     Getch()
+    }
+     
+    Practical No2: - Bisection Method
+    # include <stdio.h>
+    # include<conio.h>
+    # include<math.h>
+    Float f(float x)
+    {
+    return (x*x*x-2*x-5)
+    }
+    Void main ()
+    {
+    int i,n;
+    Float x0,x1,x2;
+    double F2;
+    Clrscr();
+    Printf ( "enter the value of x0= ");
+    Scanf("%f",&x0);
+    Print("enter the value of x1= ");
+    Scanf("%f",&x1);
+    Printf(" enter the value of number of iterations n= ");
+    Scanf("%d",&n);
+    Printf("\n------------------------------\n");
+    Printf("\n iterations \t x0 \t x1 \t x2 \t f2");
+    Printf ("\n------------------------\n");
+    if ( f(x0)*(x1)<0)
+    {
+    For (i=1;i<=n;i++)
+    {x2= (xo+x1)/2;
+    f2=f(x2);
+    Printf("\n%d\t%f\t%f\t%1f",i,x0,x1,x2,f2);
+    if (f2<0)
+    {
+    x1=x2;
+    }
+    else
+    {
+    x0=x2;
+    }
+    }
+    Printf("\n---------------------\n");
+    Print("\n\n approximate root =%f",x2);
+    }
+    else
+    {
+    Printf(" invalid interval");
+    }
+    getch ();
+    }
+    Practical No3: - NR Method
+    #include<Studio.h>
+    Float u{float x, float y}
+    {
+    return(x*x-y*y-x);
+    }
+    float v(float x, float y)
+    {
+    return(x*x-y*y-y);
+    }
+    float dudx (float x, float y)
+    {
+    return (2*x-1);
+    }
+    float dudy (float x, float y)
+    {
+    return (2*y);
+    }
+    Float dvdx(float x, float y)
+    {
+    return (-2*y-1);
+    }
+    void main()
+    {
+    int 1,n;
+    float x0,y0,fu,fv,j1,j2,j3,j4,D;
+    print("Enter the initial guess x and y");
+    Scand ("%f %f, &x0, &y0);
+    printf("Enter the no. of iteration=");
+    scand("%d", &n);
+    for (1=1; 1<n;1--)
+    {
+    fu=u(x0, y0);
+    Fv=v(x0,y0);
+    J1=dudx (x0,y0);
+    J2=dudy (x0,y0);
+    J3=dvdx (x0,y0);
+    J4=dvdy (x0,y0);
+    D=j1*j4-j2*j3;
+    x0=x0-(1/D)*(j4*fu-j2*fv);
+    y0=y0-(1-D)*(-j3*fu-j1*fv);
+    printf("\n iteration %d, x=%f and y=%f fu=%f fv=%f D=%f", 1,x0,y0,fu,fv,D);
+    }
+    return 0;
+    }
+    Practical No4: - Newtons Form Forward interpolation
+    #include<stdio.h>
+    #include<conio.h>
+    #include<math.h>
+    #define max 50
+    void main()
+    {
+    float arrx[max+1], arry[max+1], diff[max+1][5], num=1.0,
+    float x, u, h, y;
+    int i, j, k, n;
+    printf("Enter the value of n:");
+    scanf("%d", &n);
+    printf("Enter value for x and y:\n");
+    for(i=0; i<=n; i++);
+    scanf("%d %f", &arrx[i], &arry[i]);
+    for(i=0; i<=n; i++);
+    scanf("%d %f", &arrx[i], &arry[i]);
+    printf("\nEnter value of x for which value of y is needed:");
+    scanf("%d", &x);
+    h = arry[1] - arry[0];
+    for(i=0; i<=n-1; i++)
+    diff[i][j] = arry[i+1] - arry[i];
+    h = arry[1] - arry[0];
+    for(i=0; i<n-1; i++)
+    diff[i][j] = arry[i+1] arry[i];
+    for(j=2; j<5; j++)
+    for(i=0; i<=n-j; i++)
+    diff[i][j] = diff[i+1][j-1] - diff[i][j-1];
+    i = 0;
+    while(arrx[i+1] < x)
+    i++;
+    u = (x-arrx[i]/h);
+    y = arry[i];
+    for(k=1; k<5; k++)
+    {
+    Practical No: - 5 Langranges Interpolation
+    include<stdio.h>
+    #include <conio.h>
+    #include <math.h>
+    Main ()
+    Float x[10],y[10],xg,yg,1[10],nu,de:
+    Int j,k,n,i: clrscr();
+    Printf(“\n enter the number of elements:”); scanf(“%d”,&n);
+    For(i=0;i<=n-1; i++)
+    {
+    Printf(“\n enter the value of x %d:”,i); scanf(“%f”,&x[i]);
+    Printf(“\n enter the value of y zd: “,i);
+    Scanf(“%f”,&y[i]);
+    }
+    Printf(“\n enter the value of xg:”); scanf(“%f”,&xg);
+    Yg= 0;
+    For(j=0; j<n; j++)
+    Printf(“\n enter the value of x zd:”,i);
+    Scanf(“%f”,&x[i]);
+    Printf(“\n enter the value of y zd:”,i); scanf(“%f”,&y[i]);
+    }
+    Printf(“\n enter the value of xg:”); scanf(“%f”,&xg);
+    Yg= 0;
+    For(j=0; j<n; j++)
+    If (i!=j)
+    Nu = nu*(xg-x[i]); de = de*(x[j]-x[i]);
+    }
+    }
+    1[i]=nu/de:
+    Yg=yg+l[i][j];
+    Printf(“\n the final value of ygf”,yg); getch();
+    }
+    Practical No 6:- First order curve fitting using least squre
+    #include <stdio.h> 
+    #include <math.h>
+    int main()
+    {
+    int n, i; 
+    float x[10],y[10],sumx=0,sumy=0,sumxx=0,sumxy=0,delta,delta_a,delta_b;
+    float a, b;
+    printf("\n Enter the number of samples: ");
+    scanf("%d", &n); 
+    for(i=0;i<n;i++)
+    {
+    printf("\nEnter x[%d] value: ", i); 
+    scanf("%f", &x[i]);
+    }
+    for(i=0;i<n;i++) 
+    {
+    printf("\nEnter y[%d] value: ", i);
+    scanf("%f",y[i]);
+    }
+    for(i =0;i<n;i++) 
+    {
+    sumx=sumx+x[i]; 
+    sumy =sumy +y[i];
+    sumxx =sumxx + x[i]*x[i];
+    sumxy= sumxy + x[i]*y[i];
+    }
+    delta =n*sumxx-sumx*sumx;
+    delta_a=sumxx*sumy-sumx*sumxy;
+    delta_b=n*sumxy-sumx*sumy;
+    a=delta_a/delta;
+    b=delta_b/delta;
+    printf("\na= %f", a);
+    printf("\nb= %f", b);
+    printf(" y= %f+ %fx", a,b);
+    return 0;
+    }
+                            Practical No: -7 Jacobi Method
+    x=0
+    y=0
+    z=0
+    for i in range(10):
+     print("iteration no.",i+1,".........")
+     x=(17-y+2*z)/20
+     y=(-18-3*x-z)/20
+     z=(25-2*x+3*y)/20
+     a=x
+     b=y
+     c=z
+     print(x,y,z)
+     print()
+    Practical No 8: - Simpsons 1/3rd Method
+    def f(x):
+     return(1/(1+x))
+    x0=float(input("Enter the lower limit\t"))
+    x=float(input("Enter the upper limit\t"))
+    n=float(input("Enter the no. of steps\t"))
+    h=((x-x0)/n)
+    print("Applying Numerical Integration using Simpson 1/3rd Rule")
+    sum=0
+    i=0
+    while(i<=n):
+     y=f(x0)
+     if(i==0):
+     sum=sum+y
+     elif(i==n):
+     sum=sum+y
+     elif(i%2==0):
+     sum=sum+2*y
+     elif(i%2!=0):
+     sum=sum+4*y
+     x0=x0+h
+     i=i+1
+    Intg=h/3*sum
+    print("The numerical integration is",Intg)
+    Practical 9] 4Th order RK method
+    def dydx(x, y):
+     return (x+y)
+    # Finds value of y for a given x using step size h
+    # and initial value y0 at x0.
+    x0 = float(input("Enter the intial value of x \t"))
+    y0 = float(input("Enter the intial value of y \t"))
+    x = float(input("Enter the value of x for which y is to be calculated \t"))
+    h = float(input("Enter the value of step size h \t"))
+    # Count number of iterations using step size or
+    # step height h
+    n = int((x - x0)/h)
+    # Iterate for number of iterations
+    for i in range(1, n + 1):
+     "Apply Runge Kutta Formulas to find next value of y"
+     k1 = h * dydx(x0, y0)
+     k2 = h * dydx(x0 + 0.5 * h, y0 + 0.5 * k1)
+     k3 = h * dydx(x0 + 0.5 * h, y0 + 0.5 * k2)
+     k4 = h * dydx(x0 + h, y0 + k3)
+     k=(1.0 / 6.0)*(k1 + 2 * k2 + 2 * k3 + k4)
+     # Update next value of y
+     y1 = y0 + k 
+     # Update next value of x
+     x1 = x0 + h
+     x0=x1
+     y0=y1
+    print("The value of y at x=%f is %f"%(x,y0))
+</body>
+</html>
